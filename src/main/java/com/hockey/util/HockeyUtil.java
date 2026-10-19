@@ -15,6 +15,7 @@ public class HockeyUtil {
 	public final static String CLOCK_XML = "CLOCK.XML";
 	public final static String API_XML = "API.XML";
 	public final static String XML_EXTENSION = ".xml";
+	public final static String CLOCK_JSON = "CLOCK.JSON";
 	
 	public final static String STATISTIC_DIRECTORY = "Statistic/";
 	public final static String MATCH_DATA_DIRECTORY = "Match_Data/";

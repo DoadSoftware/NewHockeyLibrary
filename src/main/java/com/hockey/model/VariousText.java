@@ -19,6 +19,9 @@ public class VariousText {
   @Column(name = "VariousText")
   private String variousText;
   
+  @Column(name = "VariousText1")
+  private String variousText1;
+  
   @Column(name = "UseThis")
   private String useThis;
 
@@ -52,6 +55,14 @@ public String getUseThis() {
 
 public void setUseThis(String useThis) {
 	this.useThis = useThis;
+}
+
+public String getVariousText1() {
+	return variousText1;
+}
+
+public void setVariousText1(String variousText1) {
+	this.variousText1 = variousText1;
 }
   
 }

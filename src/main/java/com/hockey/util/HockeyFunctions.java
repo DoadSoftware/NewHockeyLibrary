@@ -104,22 +104,24 @@ public class HockeyFunctions {
 		return "";
 	}
 	
-	public static String calExtraTimeGoal(String half,long number) {
+	public static String calExtraTimeGoal(String half,long number_in_milli) {
 		
-		long time=0;
+		long time=0,number=0;
 		
-		if(half.equalsIgnoreCase("first") && number > 2700) {
-			time = ((number - 2700)/60) + 1;
-			return "45'(+" + time + "')" ;
-		}else if(half.equalsIgnoreCase("second") && number > 5400) {
-			time = ((number - 5400)/60) + 1;
-			return "90'(+" + time + "')" ;
-		}if(half.equalsIgnoreCase("extra1") && number > 6300) {
-			time = ((number - 6300)/60) + 1;
-			return "105'(+" + time + "')" ;
-		}else if(half.equalsIgnoreCase("extra2") && number > 7200) {
-			time = ((number - 7200)/60) + 1;
-			return "120'(+" + time + "')" ;
+		number = (number_in_milli/1000);
+		
+		if(half.equalsIgnoreCase("first") && number > 900) {
+			time = ((number - 900)/60) + 1;
+			return "15' (+" + time + "')" ;
+		}else if(half.equalsIgnoreCase("second") && number > 900) {
+			time = ((number - 900)/60) + 1;
+			return "15' (+" + time + "')" ;
+		}if(half.equalsIgnoreCase("extra1") && number > 900) {
+			time = ((number - 900)/60) + 1;
+			return "15' (+" + time + "')" ;
+		}else if(half.equalsIgnoreCase("extra2") && number > 900) {
+			time = ((number - 900)/60) + 1;
+			return "15' (+" + time + "')" ;
 		}else {
 			return String.valueOf((number/60)+1) + "'" ;
 		}
