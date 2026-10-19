@@ -25,6 +25,9 @@ public class Team implements Comparable<Team> {
   @Column(name = "TeamName4")
   private String teamName4;
   
+  @Column(name = "TeamBadge")
+  private String teamBadge;
+  
   @Column(name = "TeamColor")
   private String teamColor;
   
@@ -131,12 +134,20 @@ public void setTeamAssistantCoach(String teamAssistantCoach) {
 	this.teamAssistantCoach = teamAssistantCoach;
 }
 
+public String getTeamBadge() {
+	return teamBadge;
+}
+
+public void setTeamBadge(String teamBadge) {
+	this.teamBadge = teamBadge;
+}
+
 @Override
 public String toString() {
 	return "Team [teamId=" + teamId + ", teamName1=" + teamName1 + ", teamName2=" + teamName2 + ", teamName3="
-			+ teamName3 + ", teamName4=" + teamName4 + ", teamColor=" + teamColor + ", teamGroup=" + teamGroup
-			+ ", teamCoach=" + teamCoach + ", teamAssistantCoach=" + teamAssistantCoach + ", coachPhotoName="
-			+ coachPhotoName + ", teamApiId=" + teamApiId + "]";
+			+ teamName3 + ", teamName4=" + teamName4 + ", teamBadge=" + teamBadge + ", teamColor=" + teamColor
+			+ ", teamGroup=" + teamGroup + ", teamCoach=" + teamCoach + ", teamAssistantCoach=" + teamAssistantCoach
+			+ ", coachPhotoName=" + coachPhotoName + ", teamApiId=" + teamApiId + "]";
 }
 
 @Override
