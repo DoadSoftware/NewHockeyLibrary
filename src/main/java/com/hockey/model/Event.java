@@ -1,41 +1,30 @@
 package com.hockey.model;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
-@XmlRootElement(name="event")
-@XmlAccessorType(XmlAccessType.FIELD)
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Event implements Comparable<Event> {
 
-  @XmlElement(name = "eventNumber")
   private int eventNumber;
 
-  @XmlElement(name = "eventPlayerId")
   private int eventPlayerId;
-  
-  @XmlElement(name = "eventMatchHalves")
+
   private String eventMatchHalves;
-  
-  @XmlElement(name = "statsId")
+
   private int statsId;
 
-  @XmlElement(name = "eventLog")
   private String eventLog;
-  
-  @XmlElement(name = "eventType")
+
   private String eventType;
-  
-  @XmlElement(name = "offPlayerId")
+
   private int offPlayerId;
-  
-  @XmlElement(name = "onPlayerId")
+
   private int onPlayerId;
 
-  @XmlElement(name = "eventScore")
   private float eventScore;
-  
+
 public Event() {
 	super();
 }
@@ -54,7 +43,6 @@ public Event(int eventNumber, int eventPlayerId, String eventMatchHalves, int st
 	this.eventScore = eventScore;
 }
 
-
 public float getEventScore() {
 	return eventScore;
 }
@@ -62,7 +50,6 @@ public float getEventScore() {
 public void setEventScore(float eventScore) {
 	this.eventScore = eventScore;
 }
-
 
 public String getEventLog() {
 	return eventLog;

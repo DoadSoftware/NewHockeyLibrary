@@ -2,18 +2,13 @@ package com.hockey.model;
 
 import java.util.ArrayList;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlElementWrapper;
-import jakarta.xml.bind.annotation.XmlRootElement;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
-@XmlRootElement(name="EventFile")
-@XmlAccessorType(XmlAccessType.FIELD)
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class EventFile {
 
-  @XmlElementWrapper(name = "Events")
-  @XmlElement(name = "event")
   private ArrayList<Event> events;
 
 public ArrayList<Event> getEvents() {

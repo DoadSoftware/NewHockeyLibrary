@@ -1,5 +1,6 @@
 package com.hockey.dao.impl;
 
+import java.util.Collections;
 import java.util.List;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,7 @@ public class HockeyDaoImpl implements HockeyDao {
 
                 return sessionFactory.getCurrentSession()
                         .createQuery(
-                                "from Player WHERE PlayerId = :playerId",
+                                "from Player WHERE playerId = :playerId",
                                 Player.class)
                         .setParameter(
                                 "playerId",
@@ -45,7 +46,7 @@ public class HockeyDaoImpl implements HockeyDao {
                         .uniqueResult();
 
             default:
-                return null;
+                return null; // single object, so null
         }
     }
 
@@ -58,7 +59,7 @@ public class HockeyDaoImpl implements HockeyDao {
 
                 return sessionFactory.getCurrentSession()
                         .createQuery(
-                                "from Team WHERE TeamId = :teamId",
+                                "from Team WHERE teamId = :teamId",
                                 Team.class)
                         .setParameter(
                                 "teamId",
@@ -101,7 +102,7 @@ public class HockeyDaoImpl implements HockeyDao {
 
                 return sessionFactory.getCurrentSession()
                         .createQuery(
-                                "from Player WHERE TeamId = :teamId",
+                                "from Player WHERE teamId = :teamId",
                                 Player.class)
                         .setParameter(
                                 "teamId",
@@ -109,7 +110,7 @@ public class HockeyDaoImpl implements HockeyDao {
                         .getResultList();
 
             default:
-                return null;
+                return Collections.emptyList(); // list, so empty list
         }
     }
 
@@ -158,7 +159,7 @@ public class HockeyDaoImpl implements HockeyDao {
 
         return sessionFactory.getCurrentSession()
                 .createQuery(
-                        "from Ground WHERE GroundId = :groundId",
+                        "from Ground WHERE groundId = :groundId",
                         Ground.class)
                 .setParameter(
                         "groundId",
