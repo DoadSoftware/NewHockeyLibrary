@@ -116,7 +116,20 @@ public class HockeyFunctions {
 		}else if(half.equalsIgnoreCase("second") && number > 900) {
 			time = ((number - 900)/60) + 1;
 			return "15' (+" + time + "')" ;
-		}if(half.equalsIgnoreCase("extra1") && number > 900) {
+		}else if(half.equalsIgnoreCase("quarter2")) {
+			time = ((number)/60) + 1;
+			
+			System.out.println("time = " + time);
+			System.out.println("(15 + time) = " + (15 + time));
+			return (15 + time) + "'" ;
+			
+		}else if(half.equalsIgnoreCase("quarter3")) {
+			time = ((number)/60) + 1;
+			return (30 + time) + "'" ;
+		}else if(half.equalsIgnoreCase("quarter4")) {
+			time = ((number)/60) + 1;
+			return (45 + time) + "'" ;
+		}else if(half.equalsIgnoreCase("extra1") && number > 900) {
 			time = ((number - 900)/60) + 1;
 			return "15' (+" + time + "')" ;
 		}else if(half.equalsIgnoreCase("extra2") && number > 900) {
