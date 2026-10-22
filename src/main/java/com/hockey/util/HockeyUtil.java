@@ -74,6 +74,7 @@ public class HockeyUtil {
 	public final static String OFF_SIDE = "OFF_SIDE";
 	public final static String YELLOW = "YELLOW";
 	public final static String RED = "RED";
+	public final static String GREEN = "GREEN";
 	public final static String ASSISTS = "ASSISTS";
 	public final static String FOULS = "FOULS";
 	public final static String POSSESSION = "POSSESSION";
