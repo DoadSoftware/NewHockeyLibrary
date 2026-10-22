@@ -22,6 +22,7 @@ public class HockeyUtil {
 	public final static String FTP_SERVER_LINK = "soccer-ftp.stats.com";
 	
 	public final static String HOCKEY_KHELO_INDIA = "HOCKEY_KHELO_INDIA";
+	public final static String HOCKEY_PUNJAB = "PUNJAB";
 	public final static String HOCKEY_KHELO_INDIA_SCORE_BUG_SCENE_PATH = 
 			"D:/DOAD_In_House_Everest/Everest_Sports/Everest_Khelo_India_2023/Scenes/Footaball_Scorebug.sum";
 	
